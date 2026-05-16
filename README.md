@@ -1,26 +1,41 @@
 # Fortnite Cinematic Settings Tool
 
-A simple Windows utility that enables Fortnite’s hidden cinematic graphics settings by modifying `GameUserSettings.ini`.
+A simple Windows utility by **EDMIRE from BiomeForge** that modifies Fortnite’s `GameUserSettings.ini` to enable hidden cinematic graphics settings.
 
-Built by **EDMIRE from BiomeForge**.
+The tool automatically finds the Fortnite settings file, applies your chosen preset, creates a backup, and can optionally set the file to read-only so Fortnite does not reset the values.
 
-## What It Does
+## Features
 
-This tool automatically finds Fortnite’s `GameUserSettings.ini` file and applies a set of high-end cinematic rendering values, including:
-
-- Nanite enabled
-- Ray tracing enabled
-- Global illumination quality set to cinematic levels
-- Reflection quality set to cinematic levels
-- Shadows, post-processing, foliage, shading, and landscape quality boosted beyond normal in-game presets
-
-It also includes:
-
-- Automatic backup creation before changes are applied
+- Automatically locates `GameUserSettings.ini` using `%LOCALAPPDATA%`
+- Clean fixed-size Windows UI
+- Preset selector
+- Automatic backup before applying changes
 - One-click undo from the latest backup
-- Optional read-only protection to prevent Fortnite from resetting the settings
-- A clean Windows desktop UI
-- Manual file selection for unusual installs or troubleshooting
+- Optional read-only protection
+- Manual file picker for unusual config locations
+- Warning if Fortnite appears to be running
+
+## Presets
+
+### Default
+
+Recommended for normal matches.
+
+This preset uses the safer cinematic values that improve lighting, reflections, shadows, foliage, shading, and landscape quality while avoiding known visual bugs during normal gameplay.
+
+### Photography Mode
+
+Intended for screenshots only.
+
+Photography Mode maxes every numbered quality value to `5`.
+
+This can cause:
+
+- Severe performance drops
+- Severe graphical glitches
+- Visual bugs when other players wear specific outfits
+
+Use this preset only when taking screenshots or cinematic captures.
 
 ## Important GPU Warning
 
@@ -28,24 +43,27 @@ These settings have **immense GPU requirements**.
 
 DLSS, TSR, XeSS, or another upscaling method is strongly recommended unless your system has at least an **RTX 4090** or **RTX 5090**.
 
-Expect significantly reduced performance on lower-end hardware.
+Lower-end GPUs may experience major frame rate drops, stutters, or instability.
 
 ## How To Use
 
 1. Close Fortnite.
-2. Run `FortniteCinematicSettings.exe`. If it claims the game is open when its not, ignore it, it will do no harm
-3. Confirm that the tool found your `GameUserSettings.ini`.
-4. Leave **Set GameUserSettings.ini to read-only after applying** enabled if you want Fortnite to stop resetting the values.
-5. Click **Apply cinematic settings**.
-6. Launch Fortnite.
+2. Run `FortniteCinematicSettings.exe`.
+3. Confirm that the app found your `GameUserSettings.ini`.
+4. Choose a preset:
+   - `Default` for normal gameplay
+   - `Photography mode` for screenshots only
+5. Leave **Set GameUserSettings.ini to read-only after applying** enabled if you want to prevent Fortnite from resetting the settings.
+6. Click **Apply preset**.
+7. Launch Fortnite.
 
 ## Undoing Changes
 
 Click **Undo from backup** inside the app.
 
-The tool creates a timestamped backup before applying changes, stored next to the original `GameUserSettings.ini`.
+The tool creates a timestamped backup before applying changes. Backups are stored next to the original `GameUserSettings.ini`.
 
-## Settings Applied
+## Default Preset Values
 
 ```ini
 bUseNanite=True
