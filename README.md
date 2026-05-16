@@ -84,3 +84,24 @@ sg.EffectsQuality=3
 sg.FoliageQuality=5
 sg.ShadingQuality=5
 sg.LandscapeQuality=5
+
+## Photography Preset Values
+
+bUseNanite=True
+DesiredGlobalIlluminationQuality=5
+DesiredReflectionQuality=5
+PreNaniteGlobalIlluminationQuality=5
+PreNaniteReflectionQuality=5
+bRayTracing=True
+
+sg.ViewDistanceQuality=5
+sg.AntiAliasingQuality=5
+sg.ShadowQuality=5
+sg.GlobalIlluminationQuality=5
+sg.ReflectionQuality=5
+sg.PostProcessQuality=5
+sg.TextureQuality=5
+sg.EffectsQuality=5
+sg.FoliageQuality=5
+sg.ShadingQuality=5
+sg.LandscapeQuality=5
